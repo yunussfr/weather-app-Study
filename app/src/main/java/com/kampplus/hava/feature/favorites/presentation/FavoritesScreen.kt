@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
@@ -51,7 +52,7 @@ fun FavoritesScreen(
             when (uiState) {
                 UiState.Loading -> LoadingView()
                 UiState.Empty -> EmptyView(
-                    icon = Icons.Filled.FavoriteBorder,
+                    icon = Icons.Filled.Call,
                     title = stringResource(R.string.favorites_empty_title),
                     message = stringResource(R.string.favorites_empty_message)
                 )

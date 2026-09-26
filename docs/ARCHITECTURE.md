@@ -14,7 +14,7 @@ com.kampplus.hava
 │   ├── database/      HavaDatabase, DatabaseModule
 │   ├── ui/            theme (+ TemperaturePalette), component (Loading/Error/Empty/Shimmer/FavoriteToggle/TemperatureBadge),
 │   │                  UiState, UiText, AppErrorText
-│   └── navigation/    Destinations (List, Favorites, Forecast(cityId, name, region, country, lat, lon)),
+│   └── navigation/    Destinations (List, Favorites, Profile, Settings, Forecast(cityId, name, region, country, lat, lon)),
 │                      TopLevelDestination, BottomBar, HavaNavHost
 └── feature/
     ├── weather/
@@ -29,10 +29,18 @@ com.kampplus.hava
     │                  detail (ForecastDetail Route/Screen/ViewModel, HourlyForecastRow, DailyForecastItem, ShareButton)
     │                  model (UI modelleri, WeatherUiMapper, WeatherConditionUiRegistry, FavoriteMapping, TemperatureColors)
     │                  di/WeatherConditionUiModule (@IntoMap + özel @MapKey)
-    └── favorites/
-        ├── domain/    FavoriteCity, FavoriteCityRepository, Observe/ObserveIds/Toggle use case'leri
-        ├── data/      FavoriteCityLocalDataSource (InMemory → Room), dao, entity, repository, di
-        └── presentation/ Favorites Route/Screen/ViewModel, FavoritesEvent (undo), FavoriteCityCard
+    ├── favorites/
+    │   ├── domain/    FavoriteCity, FavoriteCityRepository, Observe/ObserveIds/Toggle use case'leri
+    │   ├── data/      FavoriteCityLocalDataSource (InMemory → Room), dao, entity, repository, di
+    │   └── presentation/ Favorites Route/Screen/ViewModel, FavoritesEvent (undo), FavoriteCityCard
+    ├── profile/
+    │   ├── domain/    UserProfile, repository sözleşmesi, Observe/Update use case'leri ve doğrulama kuralları
+    │   ├── data/      SharedPreferences veri kaynağı, repository implementasyonu, Hilt modülü
+    │   └── presentation/ Profile Route/Screen/ViewModel/UiState (görüntüleme + düzenleme)
+    └── settings/
+        ├── domain/    AppSettings, ThemePreference, TemperatureUnit, Observe/Update use case'leri
+        ├── data/      SharedPreferences veri kaynağı, repository implementasyonu, Hilt modülü
+        └── presentation/ Settings Route/Screen/ViewModel/UiState
 
 test/          ViewModel'ler (Turbine, debounce için virtual time), use case, MockWebServer veri kaynağı testleri,
                NetworkErrorMapper, WMO sınıflandırıcı, favori senkron testi, LayerDependencyTest
@@ -41,7 +49,7 @@ androidTest/   Room DAO testi
 
 ## Veri akışı
 
-`Retrofit/Room → DataSource → RepositoryImpl (Flow<AppResult<…>>) → UseCase → ViewModel (StateFlow<UiState>) → Route (collectAsStateWithLifecycle) → Screen (stateless)`
+`Retrofit/Room/SharedPreferences → DataSource → RepositoryImpl → UseCase → ViewModel (StateFlow<UiState>) → Route (collectAsStateWithLifecycle) → Screen (stateless)`
 
 ## Open/Closed genişleme noktaları
 
