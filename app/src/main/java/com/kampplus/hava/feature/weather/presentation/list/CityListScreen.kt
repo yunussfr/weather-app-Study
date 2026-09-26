@@ -52,6 +52,8 @@ fun CityListScreen(
                 .fillMaxSize()
                 .padding(innerPadding)
         ) {
+            YunusText("Ahmet")
+
             CitySearchField(
                 query = uiState.query,
                 onQueryChange = onQueryChange,
@@ -72,7 +74,11 @@ fun CityListScreen(
         }
     }
 }
+@Composable
+private fun YunusText(name: String){
+    Text(text=name)
 
+}
 @Composable
 private fun ListContent(
     uiState: CityListUiState,
