@@ -28,6 +28,8 @@
     <string name="action_remove_favorite">Favorilerden çıkar</string>
     <string name="nav_list">Şehirler</string>
     <string name="nav_favorites">Favoriler</string>
+    <string name="nav_profile">Profil</string>
+    <string name="nav_settings">Ayarlar</string>
     <string name="favorites_title">Favori Şehirlerim</string>
     <string name="favorites_empty_title">Henüz favori şehrin yok</string>
     <string name="favorites_empty_message">Listede ya da tahmin ekranında kalp ikonuna dokunarak şehirleri buraya ekleyebilirsin.</string>
@@ -43,4 +45,28 @@
     <string name="search_hint">Şehir ara (ör. Berlin, Rize)</string>
     <string name="action_clear">Temizle</string>
     <string name="search_empty_message">“%1$s” için şehir bulunamadı.</string>
+    <string name="profile_title">Kullanıcı Profili</string>
+    <string name="profile_name">Ad soyad</string>
+    <string name="profile_email">E-posta</string>
+    <string name="profile_city">Şehir</string>
+    <string name="profile_biography">Hakkımda</string>
+    <string name="profile_member_since">%1$d yılından beri üye</string>
+    <string name="profile_error_name">Ad soyad boş bırakılamaz.</string>
+    <string name="profile_error_email">Geçerli bir e-posta adresi yazmalısın.</string>
+    <string name="action_edit">Düzenle</string>
+    <string name="action_cancel">İptal</string>
+    <string name="action_save">Kaydet</string>
+    <string name="action_saving">Kaydediliyor…</string>
+    <string name="not_specified">Belirtilmedi</string>
+    <string name="settings_title">Ayarlar</string>
+    <string name="settings_appearance">Görünüm</string>
+    <string name="settings_theme_system">Sistem ayarını kullan</string>
+    <string name="settings_theme_light">Açık tema</string>
+    <string name="settings_theme_dark">Koyu tema</string>
+    <string name="settings_temperature_unit">Sıcaklık birimi</string>
+    <string name="settings_unit_celsius">Santigrat (°C)</string>
+    <string name="settings_unit_fahrenheit">Fahrenhayt (°F)</string>
+    <string name="settings_notifications">Bildirimler</string>
+    <string name="settings_weather_notifications">Hava durumu bildirimleri</string>
+    <string name="settings_weather_notifications_description">Önemli hava değişiklikleri için bildirim tercihimi sakla.</string>
 </resources>

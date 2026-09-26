@@ -9,6 +9,14 @@ data object ListDestination
 @Serializable
 data object FavoritesDestination
 
+/** Kullanıcı profilini gösteren üst seviye navigasyon hedefi. */
+@Serializable
+data object ProfileDestination
+
+/** Uygulama tercihlerini yöneten üst seviye navigasyon hedefi. */
+@Serializable
+data object SettingsDestination
+
 /**
  * Tahmin ekranı. Şehrin koordinatları argüman olarak taşınır; böylece detay ekranı
  * ek bir "şehir getir" isteğine ihtiyaç duymaz.
