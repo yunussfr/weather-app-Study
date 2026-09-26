@@ -134,11 +134,11 @@ private fun CityListScreenPreview() {
         CityListScreen(
             uiState = CityListUiState(
                 content = UiState.Success(
-                    List(5) { index ->
+                    List(7) { index ->
                         CityWeatherUiModel(
                             cityId = index.toLong(),
-                            title = "İstanbul",
-                            subtitle = "İstanbul, Türkiye",
+                            title = "Hava durumu",
+                            subtitle = "İstanbul, Türkiye en iyi yeri ve nasıl lyaparsanız yapın bu gerçek kişiden kişiye değişir bir kişiye gerçekten bunu kabul ettirmezsiniz .",
                             temperatureText = "2$index°",
                             temperatureC = 20.0 + index,
                             conditionEmoji = "⛅",
@@ -155,3 +155,4 @@ private fun CityListScreenPreview() {
         )
     }
 }
+
