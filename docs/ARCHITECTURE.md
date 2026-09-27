@@ -14,7 +14,7 @@ com.kampplus.hava
 │   ├── database/      HavaDatabase, DatabaseModule
 │   ├── ui/            theme (+ TemperaturePalette), component (Loading/Error/Empty/Shimmer/FavoriteToggle/TemperatureBadge),
 │   │                  UiState, UiText, AppErrorText
-│   └── navigation/    Destinations (List, Favorites, Profile, Settings, Forecast(cityId, name, region, country, lat, lon)),
+│   └── navigation/    Destinations (List, Favorites, Plans, Profile, Settings, Forecast(cityId, name, region, country, lat, lon)),
 │                      TopLevelDestination, BottomBar, HavaNavHost
 └── feature/
     ├── weather/
@@ -33,6 +33,10 @@ com.kampplus.hava
     │   ├── domain/    FavoriteCity, FavoriteCityRepository, Observe/ObserveIds/Toggle use case'leri
     │   ├── data/      FavoriteCityLocalDataSource (InMemory → Room), dao, entity, repository, di
     │   └── presentation/ Favorites Route/Screen/ViewModel, FavoritesEvent (undo), FavoriteCityCard
+    ├── plans/
+    │   ├── domain/    Plan, PlanActivity, PlanFilter; repository sözleşmesi; Observe/Filter use case'leri
+    │   ├── data/      InMemoryPlanLocalDataSource, repository implementasyonu ve Hilt bağları
+    │   └── presentation/ Plans Route/Screen/ViewModel/UiState, UI mapper ve küçük Compose bileşenleri
     ├── profile/
     │   ├── domain/    UserProfile, repository sözleşmesi, Observe/Update use case'leri ve doğrulama kuralları
     │   ├── data/      SharedPreferences veri kaynağı, repository implementasyonu, Hilt modülü

@@ -1,6 +1,6 @@
 # Hava — Hava Durumu Keşif Uygulaması
 
-Mobil Kamp "Keşif Uygulaması" gereksinimlerinin hava durumu temalı **referans çözümü**. Şehirlerin anlık havasını listeler, seçilen şehrin saatlik/günlük tahminini gösterir, favori şehirleri cihazda saklar; yükleniyor / veri / boş / hata durumlarının tamamını ele alır.
+Mobil Kamp "Keşif Uygulaması" gereksinimlerinin hava durumu temalı **referans çözümü**. Şehirlerin anlık havasını listeler, seçilen şehrin saatlik/günlük tahminini gösterir, favori şehirleri cihazda saklar ve hava koşullarına bağlı kişisel planları sunar; yükleniyor / veri / boş / hata durumlarının tamamını ele alır.
 
 **Teknoloji:** Kotlin · Jetpack Compose (Material 3) · Clean Architecture · Coroutines & StateFlow · Hilt · Retrofit · Room · Navigation Compose
 

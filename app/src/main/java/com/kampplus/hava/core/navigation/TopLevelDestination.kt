@@ -3,6 +3,7 @@ package com.kampplus.hava.core.navigation
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.List
+import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
@@ -19,6 +20,7 @@ enum class TopLevelDestination(
 ) {
     List(ListDestination, ListDestination::class, Icons.AutoMirrored.Filled.List, R.string.nav_list),
     Favorites(FavoritesDestination, FavoritesDestination::class, Icons.Filled.Favorite, R.string.nav_favorites),
+    Plans(PlansDestination, PlansDestination::class, Icons.Filled.DateRange, R.string.nav_plans),
     Profile(ProfileDestination, ProfileDestination::class, Icons.Filled.Person, R.string.nav_profile),
     Settings(SettingsDestination, SettingsDestination::class, Icons.Filled.Settings, R.string.nav_settings)
 }

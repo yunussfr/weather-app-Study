@@ -9,6 +9,10 @@ data object ListDestination
 @Serializable
 data object FavoritesDestination
 
+/** Hava koşullarıyla ilişkilendirilmiş kişisel planları gösteren üst seviye hedef. */
+@Serializable
+data object PlansDestination
+
 /** Kullanıcı profilini gösteren üst seviye navigasyon hedefi. */
 @Serializable
 data object ProfileDestination

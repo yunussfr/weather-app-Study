@@ -6,6 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.kampplus.hava.feature.favorites.presentation.FavoritesRoute
+import com.kampplus.hava.feature.plans.presentation.PlansRoute
 import com.kampplus.hava.feature.profile.presentation.ProfileRoute
 import com.kampplus.hava.feature.settings.presentation.SettingsRoute
 import com.kampplus.hava.feature.weather.domain.model.City
@@ -26,6 +27,9 @@ fun HavaNavHost(navController: NavHostController, modifier: Modifier = Modifier)
         }
         composable<FavoritesDestination> {
             FavoritesRoute(onCityClick = { favorite -> openForecast(favorite.toCity()) })
+        }
+        composable<PlansDestination> {
+            PlansRoute()
         }
         composable<ProfileDestination> {
             ProfileRoute()
